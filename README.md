@@ -39,10 +39,14 @@ Search and view upcoming events in your area.
 ##### Then: Return searches results based on the cached data (with a warning that there is no internet connection)
 #### Scenario 2: Show error when user changes the settings (city, time range)
 ##### Given: The app does not have internet connection and is using cached data
-##### When: The user changes search settings that would not be compatible with the cached settings (such as a different city or a time range that falls outside of the cached data)
-##### Then: Return a error message to the user that explains that without an internet connection they cannot change their current search settings
+##### When: The user changes search settings that would not be compatible with the cached settings (such as a different city or a time range that falls outside the cached data)
+##### Then: Return an error message to the user that explains that without an internet connection they cannot change their current search settings
 ### Feature 5: As a user, I should be able to visualize data within the app so that I can have a quick overview of what events are available to me.
 #### Scenario 1: Show a chart with the number of upcoming events in each city
 ##### Given: The search results have returned
 ##### When: The user selects an option to “visualize” the search results
 ##### Then: A chart with the appropriate metrics, based on the search, will be displayed to the user
+
+## Serverless Function for Authentication
+This project will use serverless functions that can be triggered to query the database and retrieve only the events that match the user's search requirements
+Serverless functions will also be used to trigger user authentication and pass along the token needed to call the Google Calendar API
