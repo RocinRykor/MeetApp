@@ -12,7 +12,7 @@ node_modules
 /build
 
 # enviroment variables
-config.json
+auth-server/config.json
 
 # misc
 .DS_Store
