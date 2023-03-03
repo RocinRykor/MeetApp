@@ -6,13 +6,15 @@ import {extractLocations} from '../api';
 
 describe('<CitySearch /> component', () => {
   let locations, CitySearchWrapper;
+
   beforeAll(() => {
     locations = extractLocations(mockData);
     CitySearchWrapper = shallow(<CitySearch locations={locations}/>);
   });
 
   test('ensure state is defined', () => {
-    expect(CitySearchWrapper.state).toBeDefined();
+    expect(CitySearchWrapper.state('query')).toBeDefined();
+    expect(CitySearchWrapper.state('suggestions')).toBeDefined();
   });
 
   describe('Renders', () => {
