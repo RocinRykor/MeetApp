@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+import {shallow} from 'enzyme';
 import Event from '../Event';
 import {mockData} from '../mock-data';
 
@@ -57,7 +57,6 @@ describe('<Event /> component', () => {
     });
 
     test('expands when Show Details button is clicked', () => {
-      const EventWrapper = mount(<Event event={event}/>);
       const detailsButton = EventWrapper.find('button.details-button');
       detailsButton.simulate('click');
 
