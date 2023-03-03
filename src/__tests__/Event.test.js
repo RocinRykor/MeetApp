@@ -11,6 +11,10 @@ describe('<Event /> component', () => {
     EventWrapper = shallow(<Event event={event}/>);
   });
 
+    test('ensure the state is defined', () => {
+    expect(EventWrapper.state('extended')).toBeDefined();
+  })
+
   describe('Correctly render', () => {
     test('the basic component', () => {
       expect(EventWrapper).toBeDefined();
