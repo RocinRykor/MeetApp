@@ -11,6 +11,10 @@ describe('<CitySearch /> component', () => {
     CitySearchWrapper = shallow(<CitySearch locations={locations}/>);
   });
 
+  test('ensure state is defined', () => {
+    expect(CitySearchWrapper.state).toBeDefined();
+  });
+
   describe('Renders', () => {
     test('text input', () => {
       expect(CitySearchWrapper.find('.city')).toHaveLength(1);
