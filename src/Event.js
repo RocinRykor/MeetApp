@@ -13,14 +13,14 @@ class Event extends Component {
     const {event} = this.props;
     const {extended} = this.state;
 
-    return <div className={'Event'}>
+    return <div className={'event'}>
       <h1 className="summary">
         {event.summary}
       </h1>
       <h2 className={'location'}>{event.location}</h2>
       <h2 className={'start-time'}>{event.start.dateTime}</h2>
       <button
-          className={'details-button'}
+          className={'details-btn'}
           onClick={() => this.handleClick()}>
         {extended ? 'Hide' : 'Show'} Details
       </button>
