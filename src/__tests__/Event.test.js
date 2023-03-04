@@ -39,7 +39,7 @@ describe('<Event /> component', () => {
     });
 
     test('the details button', () => {
-      const detailsButton = EventWrapper.find('button.details-button');
+      const detailsButton = EventWrapper.find('button.details-btn');
       expect(detailsButton).toHaveLength(1);
     });
   });
@@ -47,7 +47,7 @@ describe('<Event /> component', () => {
   describe('Details area', () => {
 
     test('starts as collapsed with all extra details hidden', () => {
-      const detailsButton = EventWrapper.find('button.details-button');
+      const detailsButton = EventWrapper.find('button.details-btn');
       expect(EventWrapper.state('extended')).toBe(false);
       expect(detailsButton.text()).toBe('Show Details');
 
@@ -57,7 +57,7 @@ describe('<Event /> component', () => {
     });
 
     test('expands when Show Details button is clicked', () => {
-      const detailsButton = EventWrapper.find('button.details-button');
+      const detailsButton = EventWrapper.find('button.details-btn');
       detailsButton.simulate('click');
 
       /*
@@ -85,7 +85,7 @@ describe('<Event /> component', () => {
     test('collapses when Hide Details button is clicked', () => {
       EventWrapper.setState({extended: true});
 
-      const detailsButton = EventWrapper.find('button.details-button');
+      const detailsButton = EventWrapper.find('button.details-btn');
       detailsButton.simulate('click');
 
       expect(EventWrapper.state('extended')).toBe(false);
