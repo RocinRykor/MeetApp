@@ -6,7 +6,9 @@ describe('<NumberOfEvents />', () => {
 
   let NumberOfEventsWrapper, eventNumInput;
   beforeAll(() => {
-    NumberOfEventsWrapper = shallow(<NumberOfEvents/>);
+    NumberOfEventsWrapper = shallow(
+        <NumberOfEvents updateNumberOfEvents={() => {}}/>,
+    );
     eventNumInput = NumberOfEventsWrapper.find('input.event-num-input');
   });
 
@@ -18,6 +20,13 @@ describe('<NumberOfEvents />', () => {
   test('eventNum-Input defaults to 32', () => {
     expect(eventNumInput.prop('type')).toBe(`number`);
     expect(NumberOfEventsWrapper.state('eventNum')).toBe(32);
+  });
+
+  test('the input should have the value given in the num prop', () => {
+    const NumberOfEventsWrapperWithProp = shallow(
+        <NumberOfEvents eventNum={20} updateNumberOfEvents={() => {}}/>,
+    );
+    expect(NumberOfEventsWrapperWithProp.state('eventNum')).toBe(20);
   });
 
   test('eventNum-Input is changed to 64 and the value is reflected correctly',
