@@ -1,61 +1,65 @@
 {
-	"name": "meet",
-	"version": "0.1.0",
-	"private": true,
-	"homepage": "https://RocinRykor.github.io/MeetApp",
-	"dependencies": {
-		"@testing-library/jest-dom": "^5.16.5",
-		"@testing-library/react": "^13.4.0",
-		"@testing-library/user-event": "^13.5.0",
-		"axios": "^1.3.4",
-		"nprogress": "^0.2.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-scripts": "5.0.1",
-		"web-vitals": "^2.1.4",
-		"workbox-background-sync": "^6.5.4",
-		"workbox-broadcast-update": "^6.5.4",
-		"workbox-cacheable-response": "^6.5.4",
-		"workbox-core": "^6.5.4",
-		"workbox-expiration": "^6.5.4",
-		"workbox-google-analytics": "^6.5.4",
-		"workbox-navigation-preload": "^6.5.4",
-		"workbox-precaching": "^6.5.4",
-		"workbox-range-requests": "^6.5.4",
-		"workbox-routing": "^6.5.4",
-		"workbox-strategies": "^6.5.4",
-		"workbox-streams": "^6.5.4"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!@toolz/allow-react)/\"",
-		"eject": "react-scripts eject",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
-		"enzyme": "^3.11.0",
-		"gh-pages": "^5.0.0",
-		"jest-cucumber": "^3.0.1"
-	}
+  "name": "meet",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://RocinRykor.github.io/MeetApp",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "atatus-spa": "^4.5.0",
+    "axios": "^1.2.3",
+    "nprogress": "^0.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.3.2",
+    "web-vitals": "^2.1.4",
+    "workbox-background-sync": "^6.5.4",
+    "workbox-broadcast-update": "^6.5.4",
+    "workbox-cacheable-response": "^6.5.4",
+    "workbox-core": "^6.5.4",
+    "workbox-expiration": "^6.5.4",
+    "workbox-google-analytics": "^6.5.4",
+    "workbox-navigation-preload": "^6.5.4",
+    "workbox-precaching": "^6.5.4",
+    "workbox-range-requests": "^6.5.4",
+    "workbox-routing": "^6.5.4",
+    "workbox-strategies": "^6.5.4",
+    "workbox-streams": "^6.5.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(axios)/)'",
+    "type": "module",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
+    "enzyme": "^3.11.0",
+    "gh-pages": "^4.0.0",
+    "jest-cucumber": "^3.0.1",
+    "puppeteer": "^18.2.1"
+  }
 }
