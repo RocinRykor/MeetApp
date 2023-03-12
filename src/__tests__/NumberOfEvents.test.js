@@ -4,29 +4,29 @@ import NumberOfEvents from '../NumberOfEvents';
 
 describe('<NumberOfEvents />', () => {
 
-  let NumberOfEventsWrapper, eventNumInput;
+  let NumberOfEventsWrapper, numberOfEventsInput;
   beforeAll(() => {
     NumberOfEventsWrapper = shallow(<NumberOfEvents/>);
-    eventNumInput = NumberOfEventsWrapper.find('input.event-num-input');
+    numberOfEventsInput = NumberOfEventsWrapper.find('input.event-num-input');
   });
 
-  test('Renders basic component and eventNum Input', () => {
+  test('Renders basic component and numberOfEvents Input', () => {
     expect(NumberOfEventsWrapper).toBeDefined();
-    expect(eventNumInput).toBeDefined();
+    expect(numberOfEventsInput).toBeDefined();
   });
 
-  test('eventNum-Input defaults to 32', () => {
-    expect(eventNumInput.prop('type')).toBe(`number`);
-    expect(NumberOfEventsWrapper.state('eventNum')).toBe(32);
+  test('numberOfEvents-Input defaults to 32', () => {
+    expect(numberOfEventsInput.prop('type')).toBe(`number`);
+    expect(NumberOfEventsWrapper.state('numberOfEvents')).toBe(32);
   });
 
-  test('eventNum-Input is changed to 64 and the value is reflected correctly',
+  test('numberOfEvents-Input is changed to 64 and the value is reflected correctly',
       () => {
-        expect(NumberOfEventsWrapper.state('eventNum')).toBe(32);
-        eventNumInput.simulate('change', {
+        expect(NumberOfEventsWrapper.state('numberOfEvents')).toBe(32);
+        numberOfEventsInput.simulate('change', {
           target: {value: 64},
         });
-        expect(NumberOfEventsWrapper.state('eventNum')).toBe(64);
+        expect(NumberOfEventsWrapper.state('numberOfEvents')).toBe(64);
       });
 
 });
