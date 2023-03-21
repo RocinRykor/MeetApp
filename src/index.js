@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import * as atatus from 'atatus-spa';
 
 atatus.config('72ce954a125a40aa8a6e4836ce1f7663').install();
-atatus.notify(new Error('Test Atatus Setup'));
+// atatus.notify(new Error('Test Atatus Setup')); //Commenting this out but leaving it with a reminder, and explanation of why it did not initially work, having an Adblocker on prevents traffic to/from Atatus
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
