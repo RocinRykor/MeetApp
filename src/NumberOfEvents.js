@@ -33,6 +33,7 @@ class NumberOfEvents extends Component {
               value={eventNum}
               onChange={event => {
                 this.changeEventNum(event.target.value);
+                this.props.updateEvents();
               }}
           >
           </input>
