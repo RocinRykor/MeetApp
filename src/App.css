@@ -197,6 +197,9 @@ input[type="number"] {
   letter-spacing: 0.2px;
   font-family: "Roboto";
 }
+.Alert {
+  text-align: center;
+}
 
 
 
