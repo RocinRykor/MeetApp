@@ -1,0 +1,134 @@
+/* Cyberpunk Neon Palette */
+$dark: #091833;
+$medium: #133e7c;
+$light: #0abdc6;
+
+$primary-accent: #ea00d9;
+$secondary-accent: #711c91;
+
+$default-border-radius: 25px;
+$angle: 0deg;
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=PT+Serif:wght@400;700&display=swap');
+
+body, html {
+  background: linear-gradient($medium, $dark 150%);
+  height: 100%;
+}
+
+.Alert {
+  text-align: center;
+}
+
+.suggestions {
+  width: 14rem;
+  position: absolute;
+  z-index: 2;
+  align-self: center;
+  margin: 0 auto;
+  top: 220px;
+  font-size: 14px;
+  box-shadow: 10px 10px 16px -12px rgba(207, 205, 205, 0.75);
+}
+
+.suggestions > li {
+  color: $primary-accent;
+  text-align: left;
+  padding: 8px 6px 8px 10px;
+  cursor: default;
+}
+
+.suggestions > li:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.suggestions > li:hover {
+  background-color: #bcdcdb;
+}
+
+.WelcomeScreen {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding-top: 10%;
+  background: linear-gradient($medium, $dark 150%);
+}
+
+.welcome-title {
+  font-family: 'Dosis', sans-serif;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+.login-button {
+  color: #494949;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  border: 4px solid #494949;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  min-width: 10rem;
+  margin: 1rem;
+}
+
+.google-btn {
+  width: 184px;
+  height: 42px;
+  margin: 1rem;
+  background-color: #4285f4;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.google-btn:hover {
+  box-shadow: 0 0 6px #4285f4;
+}
+
+.google-btn:active {
+  background: #1669f2;
+}
+
+.google-icon-wrapper {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.google-icon {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: -8px;
+  width: 18px;
+  height: 18px;
+}
+
+.btn-text {
+  float: right;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  font-family: "Roboto";
+  background-color: #4285f4;
+  width: 80%;
+  height: 100%;
+  text-align: center;
+}
+
+.privacy-link {
+  font-family: 'Dosis', sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  text-align: center;
+}

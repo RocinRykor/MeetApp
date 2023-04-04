@@ -1,16 +1,18 @@
 import React from 'react';
-import './WelcomeScreen.css';
+import './scss/styles.scss';
 
 function WelcomeScreen(props) {
   return props.showWelcomeScreen ?
       (
           <div className="WelcomeScreen">
-            <h1>Welcome to the Meet app</h1>
-            <h4>
-              Log in to see upcoming events around the world for
-              full-stack
-              developers
-            </h4>
+            <div className={"welcome-title"}>
+              <h1>Welcome to the Meet app</h1>
+              <h4>
+                Log in to see upcoming events around the world for
+                full-stack
+                developers
+              </h4>
+            </div>
             <div className="button_cont" align="center">
               <div class="google-btn">
                 <div class="google-icon-wrapper">
@@ -32,8 +34,9 @@ o.svg"
             <a
                 href="https://rocinrykor.github.io/MeetApp/privacy.html"
                 rel="nofollow noopener"
+                className={"privacy-link"}
             >
-              Privacy policy
+              Click here to review the Privacy Policy
             </a>
           </div>
       )

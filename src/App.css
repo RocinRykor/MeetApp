@@ -4,6 +4,16 @@
   padding: 2% 5%;
 }
 
+:root {
+    --primary: #FD768C;
+    --secondary: #304366;
+    --tertiary: #00BFFF;
+}
+
+body {
+  background: var(--secondary);
+}
+
 .App * {
   box-sizing: border-box;
 }

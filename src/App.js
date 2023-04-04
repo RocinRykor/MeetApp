@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+// import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
