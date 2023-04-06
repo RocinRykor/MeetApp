@@ -9,7 +9,6 @@ class EventList extends Component {
     return (
         <div>
           <div>
-            <h2>Events</h2>
             {!online && <WarningAlert
                 text="You're currently using the app offline. These events might not be up to date."></WarningAlert>}
           </div>

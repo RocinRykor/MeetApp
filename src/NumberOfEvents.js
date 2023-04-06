@@ -26,7 +26,7 @@ class NumberOfEvents extends Component {
     return (
         <div className="numberOfEvents">
           <ErrorAlert text={errorText}/>
-          <h3>Number of Events:</h3>
+          <h2>Number of Events:</h2>
           <input
               className="event-num-input"
               type="number"
@@ -35,8 +35,8 @@ class NumberOfEvents extends Component {
                 this.changeEventNum(event.target.value);
                 this.props.updateEvents();
               }}
-          >
-          </input>
+              style={this.state.errorText && this.state.errorText.length > 0 ? { borderColor: 'red' } : {}}
+          />
         </div>
     );
   }

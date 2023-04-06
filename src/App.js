@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import './App.css';
+import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
@@ -68,14 +68,17 @@ class App extends Component {
 
     return (
         <div className="App">
-          <CitySearch locations={this.state.locations}
-                      updateEvents={this.updateEvents}/>
-          <NumberOfEvents
-              eventNum={this.state.numberOfEvents}
-              updateNumberOfEvents={(eventNum) => this.updateNumberOfEvents(
-                  eventNum)}
-              updateEvents={this.updateEvents}
-          />
+          <h1 className={"title"}>Welcome To Meet!</h1>
+          <div className={'filters'}>
+            <CitySearch locations={this.state.locations}
+                        updateEvents={this.updateEvents}/>
+            <NumberOfEvents
+                eventNum={this.state.numberOfEvents}
+                updateNumberOfEvents={(eventNum) => this.updateNumberOfEvents(
+                    eventNum)}
+                updateEvents={this.updateEvents}
+            />
+          </div>
           <EventList events={this.state.events}/>
           <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}
                          getAccessToken={() => { getAccessToken(); }}/>

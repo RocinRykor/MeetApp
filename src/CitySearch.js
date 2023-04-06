@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
-import { InfoAlert } from './Alert';
+import {InfoAlert} from './Alert';
+
 class CitySearch extends Component {
   state = {
     query: '',
     suggestions: [],
     showSuggestions: false,
-    infoText:''
+    infoText: '',
   };
 
-   handleInputChanged = (event) => {
+  handleInputChanged = (event) => {
     const value = event.target.value;
-    this.setState({showSuggestions:true});
+    this.setState({showSuggestions: true});
     const suggestions = this.props.locations.filter((location) => {
       return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
     });
@@ -23,7 +24,7 @@ class CitySearch extends Component {
       return this.setState({
         query: value,
         suggestions,
-        infoText:''
+        infoText: '',
       });
     }
   };
@@ -40,13 +41,17 @@ class CitySearch extends Component {
   render() {
     return (
         <div className={'CitySearch'}>
-          <InfoAlert text={this.state.infoText} />
+          <InfoAlert text={this.state.infoText}/>
+          <h2>Location:</h2>
           <input
               type={'text'}
               className={'city'}
+              placeholder={'Search for a city:'}
               value={this.state.query}
               onChange={this.handleInputChanged}
-              onFocus={() => {this.setState({showSuggestions: true});}}
+              style={this.state.infoText && this.state.infoText.length > 0
+                  ? {borderColor: 'red'}
+                  : {}}
           />
 
           <ul
