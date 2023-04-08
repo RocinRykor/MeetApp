@@ -127,6 +127,18 @@ input {
     padding: .25em 0 0;
 }
 
+.data-vis-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 2%;
+}
+
+.data-vis-wrapper .recharts-responsive-container {
+  min-width: 100%;
+  display: flex;
+}
+
 
 @media only screen and (min-width: 992px) {
     .data-vis-wrapper {
