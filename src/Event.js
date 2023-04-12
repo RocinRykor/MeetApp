@@ -25,23 +25,23 @@ class Event extends Component {
         {extended ? 'Hide' : 'Show'} Details
       </button>
       {extended && (
-          <div className='details'>
+          <div className="details">
             <h2>
               More Details:
             </h2>
             <a
-              className='link'
-              href={event.htmlLink}
-              target='_blank'
-              rel='noopener noreferrer'
+                className="link"
+                href={event.htmlLink}
+                target="_blank"
+                rel="noopener noreferrer"
             >
               View Event Details on Google Calendar
             </a>
-            <p className='description'>
+            <p className="description">
               {event.description}
             </p>
           </div>
-        )}
+      )}
     </div>;
   }
 }

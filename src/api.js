@@ -56,11 +56,9 @@ const getToken = async (code) => {
 };
 
 export const checkToken = async (accessToken) => {
-  const result = await fetch(
+  return await fetch(
       `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`,
   ).then((res) => res.json()).catch((error) => error.json());
-
-  return result;
 };
 export const getEvents = async () => {
   NProgress.start();
@@ -86,7 +84,7 @@ export const getEvents = async () => {
         '/' + token;
     const result = await axios.get(url);
     if (result.data) {
-      var locations = extractLocations(result.data.events);
+      const locations = extractLocations(result.data.events);
       localStorage.setItem('lastEvents', JSON.stringify(result.data));
       localStorage.setItem('locations', JSON.stringify(locations));
     }

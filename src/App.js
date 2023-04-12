@@ -4,17 +4,16 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import WelcomeScreen from './WelcomeScreen';
-import {getEvents, extractLocations, checkToken, getAccessToken} from
-      './api';
+import {checkToken, extractLocations, getAccessToken, getEvents} from './api';
 import './nprogress.css';
 import {
-  ScatterChart,
+  CartesianGrid,
+  ResponsiveContainer,
   Scatter,
+  ScatterChart,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
 } from 'recharts';
 import EventGenre from './EventGenre';
 
@@ -74,13 +73,12 @@ class App extends Component {
 
   getData = () => {
     const {locations, events} = this.state;
-    const data = locations.map((location) => {
+    return locations.map((location) => {
       const number = events.filter(
           (event) => event.location === location).length;
       const city = location.split(', ').shift();
       return {city, number};
     });
-    return data;
   };
 
   render() {
